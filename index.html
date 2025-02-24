@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUADA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffeff7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: #ff66b2;
+            color: white;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        .imagen-sorpresa {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #ff66b2;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .botones {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #ff66b2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        button:hover {
+            background-color: #ff3385;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>¡Siempre amigos!</h1>
+    </header>
+
+    <section>
+        <h2>Guadi, ¿quisieras ser mi besti la mas real?</h2>
+        <div class="botones">
+            <button onclick="respuesta('Sí')">Sí</button>
+            <button onclick="respuesta('No')">No</button>
+        </div>
+        <p id="respuesta"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 9/12/18 . ¡viva bocabocaboca!</p>
+    </footer>
+
+ <script>
+        function respuesta(opcion) {
+            var mensaje = "";
+            if (opcion === "Sí") {
+                mensaje = "¡SIIIIIIII! TE QUIERO";
+            } else if (opcion === "No") {
+                mensaje = "¡ASHHHHH! OKO";
+            }
+            document.getElementById("respuesta").innerText = mensaje;
+            
+            // Mostrar un mensaje emergente con la respuesta seleccionada
+            alert("Guada seleccionó: " + opcion);
+        }
+    </script>
+</body>
+</html>
